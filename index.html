@@ -6,16 +6,36 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://kit.fontawesome.com/94e3ce4c95.js" crossorigin="anonymous"></script>
+        <!-- <script src="js/menu.js"></script> -->
     </head>
     <body>
     	<div id="menu">
-    		
-    	</div>
-		<div id="title-section"> 
+			<div>
+				<a class="menu-button" href="#about">
+					<h6 class="menu-text">about</h6>
+				</a>
+			</div>
+			<div>
+				<a class="menu-button" href="#projects">
+					<h6 class="menu-text">projects</h6>
+				</a>
+			</div>
+			<div>
+				<a class="menu-button" href="#cv">
+					<h6 class="menu-text">cv</h6>
+				</a>
+			</div>
+			<div>
+				<a class="menu-button" href="#contact">
+					<h6 class="menu-text">contact</h6>
+				</a>
+			</div>
+		</div>
+		<div class="section" id="main">
     		<h1>Jasmine Brown</h1>
-    		<br>
     		<div id="icons">
     			<a href="mailto:jasminebrown2308@gmail.com">
 	    			<div class="icon">
@@ -38,9 +58,29 @@
 					</div>
 	    		</a>
     		</div>
+    		<a id="scroll-down" href="#about">
+	    		<div>
+	    			<i id="chevron-3" class="fas fa-chevron-down"></i>
+	    			<i id="chevron-2" class="fas fa-chevron-down"></i>
+	    			<i id="chevron-1" class="fas fa-chevron-down"></i>
+	    		</div>
+	    	</a>
     	</div>
-    	<div id="about-section">
+    	<br>
+    	<div id="about" class="section">
     		<h2>About me</h2>
+    	</div>
+    	<br>
+    	<div id="projects" class="section">
+    		<h2>Projects</h2>
+    	</div>
+    	<br>
+    	<div id="cv" class="section">
+    		<h2>CV</h2>
+    	</div>
+    	<br>
+    	<div id="contact" class="section">
+    		<h2>Get in touch</h2>
     	</div>
     </body>
 </html>

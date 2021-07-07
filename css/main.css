@@ -1,21 +1,58 @@
-/*html {
-	margin: 0;
-	padding: 0;
-}*/
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	margin: 0;
 }
 
-div[id$=section] {
+#menu {
+	position: absolute;
+	display: flex;
+	right: 0;
+	margin: 2vh 2vw;
+}
+
+.menu-text {
+	font-size: x-large;
+	font-family: 'Arimo', sans-serif;
+	text-transform: uppercase;
+	color: #a0a0a0;
+	cursor: pointer;
+	margin: 0vh 2vw;
+	padding: 3vh 0vw;
+	transition: color 0.2s ease;
+}
+
+.menu-text:hover {
+	color: white;
+}
+
+.menu-text:after {
+	content: '';
+	border-bottom: 2px solid #caebdd;
+	width: 0;
+	display: block;
+	transition: width 0.2s ease;
+}
+
+.menu-text:hover:after {
+	width: 100%;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+.section {
 	width: 90vw;
 	height: 90vh;
 	padding: 5vh 5vw;
 }
 
-#title-section {
+#main {
 	text-align: center;
-	background-color: black;
+	background-color: #1a1a1a;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -39,16 +76,70 @@ div[id$=section] {
 
 .icon:hover {
 	transform: scale(1.1);
+	background-color: #caebdd;
 }
 
 i {
 	font-size: 40px;
-	color: black;
+	color: #1a1a1a;
 }
 
-#about-section {
-
+#scroll-down {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 3vh;
 }
+
+#scroll-down div {
+	display: flex;
+	flex-direction: column;
+}
+
+i[id^=chevron] {
+	color: #caebdd;
+	position: relative;
+	transition: 0.3s all ease-in;
+}
+
+#chevron-3 {
+	opacity: 0;
+	transform: translateY(18px) scale(0.5);
+}
+
+#chevron-2 {
+	opacity: 0.5;
+}
+
+#chevron-1 {
+	transform: translateY(-18px);
+}
+
+#scroll-down:hover #chevron-3 {
+	transform: translateY(48px) scale(1);
+	opacity: 0.5;
+}
+
+#scroll-down:hover #chevron-2 {
+	transform: translateY(30px);
+	opacity: 0;
+}
+
+#scroll-down:hover #chevron-1 {
+	transform: translateY(-8px);
+}
+
+/*#about-section {
+	background-color: red;
+}
+
+#projects-section {
+	background-color: green;
+}
+
+#cv-section {
+	background-color: yellow;
+}*/
 
 h1 {
 	font-family: 'Raleway', sans-serif;
@@ -62,4 +153,17 @@ h2 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	font-size: 50px;
+}
+
+h1::selection {
+	background-color: #caebdd;
+	color: #1a1a1a;
+}
+
+h2::selection {
+	background-color: #caebdd;
+}
+
+h6::selection {
+	background-color: #caebdd;
 }
