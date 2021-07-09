@@ -1,47 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Raleway+Dots&family=Raleway:wght@100;200;400;500;600;700&display=swap');
+
 html {
 	scroll-behavior: smooth;
 }
 
 body {
 	margin: 0;
+	--accent-color: #caebdd;
 }
 
-#menu {
-	position: absolute;
-	display: flex;
-	right: 0;
-	margin: 2vh 2vw;
+h1, h2, h6, input, label {
+	font-family: 'Raleway', sans-serif;
 }
 
-.menu-text {
-	font-size: x-large;
-	font-family: 'Arimo', sans-serif;
-	text-transform: uppercase;
-	color: #a0a0a0;
-	cursor: pointer;
-	margin: 0vh 2vw;
-	padding: 3vh 0vw;
-	transition: color 0.2s ease;
+p, textarea {
+	font-family: 'Lora', serif;
 }
 
-.menu-text:hover {
+h1 {
+	margin: 0;
 	color: white;
+	font-size: 90px;
+	text-transform: uppercase;
 }
 
-.menu-text:after {
-	content: '';
-	border-bottom: 2px solid #caebdd;
-	width: 0;
-	display: block;
-	transition: width 0.2s ease;
+h2 {
+	font-weight: 700;
+	font-size: 50px;
 }
 
-.menu-text:hover:after {
-	width: 100%;
+h6 {
+	color: #a0a0a0;
+	font-size: 24px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+::selection {
+	background-color: var(--accent-color);
+}
+
+h1::selection {
+	color: #1a1a1a;
 }
 
 a:link {
 	text-decoration: none;
+}
+
+button {
+	border: none;
+	background-color: unset;
+	cursor: pointer;
 }
 
 .section {
@@ -50,61 +60,90 @@ a:link {
 	padding: 5vh 5vw;
 }
 
-#main {
-	text-align: center;
+/***** MENU *****/
+#menu {
+	position: absolute;
+	right: 0;
+	display: flex;
+	justify-content: flex-end;
+	width: 96vw;
+	padding: 2vh 2vw 0vh 2vw;
 	background-color: #1a1a1a;
+}
+
+.menu-text {
+	margin: 0vh 2vw;
+	padding: 3vh 0vw;
+	color: #a0a0a0;
+	transition: color 0.2s ease;
+}
+
+.menu-text:hover {
+	color: white;
+}
+
+.menu-text:after {
+	display: block;
+	content: '';
+	width: 0;
+	border-bottom: 2px solid var(--accent-color);
+	transition: width 0.2s ease;
+}
+
+.menu-text:hover:after {
+	width: 100%;
+}
+
+#menu-sensor {
+	position: fixed;
+	width: 100vw;
+	height: calc(7vh + 24px);
+}
+
+/***** MAIN/TITLE SECTION *****/
+#main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: #1a1a1a;
+	text-align: center;
 }
 
 #icons {
-	margin-top: 5vh;
 	display: flex;
+	margin-top: 5vh;
 }
 
 .icon {
-	background-color: white;
+	width: 50px;
 	padding: 2vh 1vw;
 	margin: 10px;
-	width: 50px;
 	border-radius: 5px;
+	background-color: white;
 	cursor: pointer;
 	transition: all .2s ease-in-out;
 }
 
 .icon:hover {
 	transform: scale(1.1);
-	background-color: #caebdd;
+	background-color: var(--accent-color);
 }
 
 i {
-	font-size: 40px;
 	color: #1a1a1a;
-}
-
-#scroll-down {
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	padding-bottom: 3vh;
-}
-
-#scroll-down div {
-	display: flex;
-	flex-direction: column;
+	font-size: 40px;
 }
 
 i[id^=chevron] {
-	color: #caebdd;
 	position: relative;
+	color: var(--accent-color);
 	transition: 0.3s all ease-in;
 }
 
 #chevron-3 {
-	opacity: 0;
 	transform: translateY(18px) scale(0.5);
+	opacity: 0;
 }
 
 #chevron-2 {
@@ -129,6 +168,18 @@ i[id^=chevron] {
 	transform: translateY(-8px);
 }
 
+#scroll-down {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding-bottom: 3vh;
+}
+
+#scroll-down div {
+	display: flex;
+	flex-direction: column;
+}
+
 /*#about-section {
 	background-color: red;
 }
@@ -141,29 +192,121 @@ i[id^=chevron] {
 	background-color: yellow;
 }*/
 
-h1 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 90px;
-	text-transform: uppercase;
-	margin: 0;
+
+/***** CONTACT SECTION *****/
+
+#contact {
+	height: unset;
+	background-color: #1a1a1a;
+}
+
+#contact h2 {
 	color: white;
 }
 
-h2 {
-	font-family: 'Raleway', sans-serif;
-	font-weight: 700;
-	font-size: 50px;
+#contact-form {
+	width: 90%;
+	padding: 5vh 5%;
+	border-radius: 5px;
+	background-color: #e5e5e5;
 }
 
-h1::selection {
-	background-color: #caebdd;
-	color: #1a1a1a;
+label {
+	float: left;
+	padding: 5px 0;
+	font-size: 30px;
+	font-weight: 200;
+	text-transform: uppercase;
 }
 
-h2::selection {
-	background-color: #caebdd;
+input, textarea {
+	border: none;
+	caret-color: var(--accent-color);
 }
 
-h6::selection {
-	background-color: #caebdd;
+input {
+	padding: 8px 2%;
+	font-size: 24px;
+	font-weight: 200;
+}
+
+.row {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 1vh;
+}
+
+.center {
+	width: 300px;
+	margin: auto;
+}
+
+#name-input, #email-input {
+	float: right;
+	width: 80%;
+}
+
+input[type=submit] {
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #666666;
+	background-color: var(--accent-color);
+	font-weight: 500;
+	white-space: normal;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+input[type=submit]:hover {
+	background-color: #a6ddc6;
+	border-color: #1a1a1a
+}
+
+textarea {
+	width: 96%;
+	margin-bottom: 3vh;
+	padding: 2vh 2%;
+	font-size: 18px;
+	resize: vertical;
+}
+
+#icon-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5vh;
+	text-align: center;
+}
+
+:focus {
+	outline: none;
+}
+
+input[id$=input]:focus {
+	border-bottom: 2px solid var(--accent-color);
+}
+
+textarea:focus {
+	border: 2px solid var(--accent-color);
+	width: calc(96% - 4px);
+}
+
+@media screen and (max-width: 800px) {
+	#name-input, #email-input {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.row {
+		height: 80px;
+	}
+
+	.center {
+		width: 96%;
+	}
+
+	#name-input, #email-input {
+		width: 96%;
+	}
 }
