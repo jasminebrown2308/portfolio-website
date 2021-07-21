@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Raleway:wght@100;200;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Raleway:wght@100;200;400;500;600;700&display=swap');
 
 html {
 	scroll-behavior: smooth;
@@ -67,6 +67,13 @@ button {
 	padding: 5vh 5vw;
 }
 
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
 /***** MENU *****/
 #menu {
 	position: absolute;
@@ -76,6 +83,7 @@ button {
 	width: 96vw;
 	padding: 2vh 2vw 0vh 2vw;
 	background-color: #1a1a1a;
+	z-index: 2;
 }
 
 .menu-text {
@@ -203,6 +211,7 @@ i[id^=chevron] {
 }
 
 #cv-download-btn {
+	left: 0;
 	display: flex;
 	align-items: center;
 	width: unset;
@@ -219,31 +228,72 @@ i[id^=chevron] {
 	padding: 0 2vw;
 }
 
+#categories {
+	right: 0;
+	display: grid;
+	grid-column-gap: 5vw;
+	grid-row-gap: 5vh;
+	grid-template-columns: auto auto;
+}
+
 #years {
-	width: 20vw;
-	border-right: solid 5px #1a1a1a;
+	width: 100%;
+}
+
+.year-container {
+	width: 100%;
+	display: flex;
 }
 
 .year {
+	float: left;
 	padding: 5px;
+	width: 20%;
+	margin-right: 30px;
+	border-right: solid 5px #1a1a1a;
 	background-color: #e5e5e5;
 	text-align: center;
+	transition: padding 0.3s ease;
 }
 
-.year:first-child {
+.year-container:first-child .year {
 	border-top-left-radius: 10px;
 }
 
-.year:last-child {
+.year-container:last-child .year {
 	border-bottom-left-radius: 10px;
 }
 
-.container {
-
+.content {
+	float: right;
+	width: calc(80% - 15px);
+	height: 40px;
 }
 
+.content p {
+	padding: 0px 20px;
+}
 
+.content .event-title::before { /* add circles on the timeline */
+	content: '';
+	display: inline-block;
+	position: relative;
+	width: 25px;
+	height: 25px;
+	right: 67.5px;
+	background-color: white;
+	border: 3px solid black;
+	top: 9px;
+	border-radius: 50%;
+	z-index: 1;
+	margin-right: -31px;
+}
 
+.event-title {
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+}
 
 /***** CONTACT SECTION *****/
 
@@ -263,7 +313,7 @@ i[id^=chevron] {
 	background-color: #e5e5e5;
 }
 
-label {
+#contact-form label {
 	float: left;
 	padding: 5px 0;
 	font-size: 30px;

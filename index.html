@@ -7,6 +7,7 @@
         <script src="https://kit.fontawesome.com/94e3ce4c95.js" crossorigin="anonymous"></script>
         <script src="js/scroll.js"></script>
         <script src="js/timeline.js"></script>
+        <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     </head>
     <body>
     	<!-- MENU -->
@@ -48,15 +49,15 @@
 	    				<i class="fas fa-phone"></i>
 	    			</div>
 	    		</a>
-	    		<a href="https://github.com/jasminebrown2308">
-	    			<div class="icon">
-	    				<i class="fab fa-github"></i>
-	    			</div>
-	    		</a>
     			<a href="https://linkedin.com/in/jasminebrown2308/">
 					<div class="icon">
 						<i class="fab fa-linkedin"></i>
 					</div>
+	    		</a>
+	    		<a href="https://github.com/jasminebrown2308">
+	    			<div class="icon">
+	    				<i class="fab fa-github"></i>
+	    			</div>
 	    		</a>
     		</div>
     		<button id="scroll-down" onclick="jumpToSection('about')">
@@ -88,38 +89,25 @@
     			<i class="fas fa-file-download"></i>
     			<h3>View as PDF</h3>
     		</button>
-	    	<div id="years">
-				<div class="year" id="year2021">
-					<h3>2021</h3>
-				</div>
-				<div class="year" id="year2020">
-					<h3>2020</h3>
-				</div>
-				<div class="year" id="year2019">
-					<h3>2019</h3>
-				</div>
-				<div class="year" id="year2018">
-					<h3>2018</h3>
-				</div>
-				<div class="year" id="year2017">
-					<h3>2017</h3>
-				</div>
-				<div class="year" id="year2016">
-					<h3>2016</h3>
-				</div>
-				<div class="year" id="year2015">
-					<h3>2015</h3>
-				</div>
-				<div class="year" id="year2013">
-					<h3>2013</h3>
-				</div>
-				<div class="year" id="year2011">
-					<h3>2011</h3>
-				</div>
-				<div class="year" id="year2009">
-					<h3>2009</h3>
-				</div>
-	    	</div>
+    		<div id="categories">
+    			<div id="category-container">
+    				<input type="checkbox" id="education-checkbox" checked>
+	    			<label for="education-checkbox">Education</label>
+	    		</div>
+	    		<div id="category-container">
+	    			<input type="checkbox" id="work-checkbox" checked>
+	    			<label for="work-checkbox">Work</label>
+	    		</div>
+	    		<div id="category-container">
+	    			<input type="checkbox" id="technical-checkbox" checked>
+	    			<label for="tech-checkbox">Tech stuff</label>
+	    		</div>
+	    		<div id="category-container">
+	    			<input type="checkbox" id="extra-checkbox" checked>
+	    			<label for="extra-checkbox">Extra-curricular</label>
+	    		</div>
+    		</div>
+	    	<div id="years"></div>
     	</div>
     	<br>
 
