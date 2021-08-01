@@ -90,36 +90,38 @@
 	    			<i class="fas fa-file-download"></i>
 	    			<h3>Download as PDF</h3>
 	    		</button>
-	    		<div id="categories">
-	    			<div id="category-container">
-		    			<label class="category-label">Education
-		    				<input type="checkbox" id="education-checkbox" onclick="categorySelect(this)" checked>
-		    				<span class="checkmark"></span>
-		    			</label>
+	    		<span id="options-container">
+		    		<div id="categories">
+		    			<div id="category-container">
+			    			<label class="category-label">Education
+			    				<input type="checkbox" id="education-checkbox" onclick="categorySelect(this)" checked>
+			    				<span class="checkmark"></span>
+			    			</label>
+			    		</div>
+			    		<div id="category-container">
+			    			<label for="workexp-checkbox" class="category-label">Work experience
+			    				<input type="checkbox" id="workexp-checkbox" onclick="categorySelect(this)" checked>
+			    				<span class="checkmark"></span>
+			    			</label>
+			    		</div>
+			    		<div id="category-container">
+			    			<label for="jobs-checkbox" class="category-label">Employment
+			    				<input type="checkbox" id="jobs-checkbox" onclick="categorySelect(this)" checked>
+			    				<span class="checkmark"></span>
+			    			</label>
+			    		</div>
+			    		<div id="category-container">
+			    			<label for="extra-checkbox" class="category-label">Extra-curricular
+			    				<input type="checkbox" id="extra-checkbox" onclick="categorySelect(this)" checked>
+			    				<span class="checkmark"></span>
+			    			</label>
+			    		</div>
 		    		</div>
-		    		<div id="category-container">
-		    			<label for="workexp-checkbox" class="category-label">Work experience
-		    				<input type="checkbox" id="workexp-checkbox" onclick="categorySelect(this)" checked>
-		    				<span class="checkmark"></span>
-		    			</label>
-		    		</div>
-		    		<div id="category-container">
-		    			<label for="jobs-checkbox" class="category-label">Employment
-		    				<input type="checkbox" id="jobs-checkbox" onclick="categorySelect(this)" checked>
-		    				<span class="checkmark"></span>
-		    			</label>
-		    		</div>
-		    		<div id="category-container">
-		    			<label for="extra-checkbox" class="category-label">Extra-curricular
-		    				<input type="checkbox" id="extra-checkbox" onclick="categorySelect(this)" checked>
-		    				<span class="checkmark"></span>
-		    			</label>
-		    		</div>
-	    		</div>
-	    		<button id="expand-btn" onclick="toggleExpand()">
-	    			<i id="expand-arrow" class="fas fa-chevron-down"></i>
-	    			<h3 id="expand-txt">Expand all</h3>
-	    		</button>
+		    		<button id="expand-btn" onclick="toggleExpand()">
+		    			<i id="expand-arrow" class="fas fa-chevron-down"></i>
+		    			<h3 id="expand-txt">Expand all</h3>
+		    		</button>
+	    		</span>
 	    	</div>
 	    	<div id="years"></div>
     	</div>

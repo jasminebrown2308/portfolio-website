@@ -140,16 +140,17 @@ function showCVData(cvData, showDetails) {
 			let eventData = yearData.events[e];
 			$("#content"+year).append("<p class='event-title' id='"+year+"_"+e+"'>"+eventData.title+"</p>");
 			if (!showDetails) {
-				showDescription(year, e, eventData);
+				displayDetails(year, e, eventData);
 			}
 
 			// Toggle whether description is shown when event title is clicked
 			$("#"+year+"_"+e).click(function() {
 				if ($("#desc"+year+"_"+e).length) { // if description is shown then hide it
 					$("#desc"+year+"_"+e).remove();
+					$("#dates"+year+"_"+e).remove();
 				}
 				else { // if description is hidden then show it
-					showDescription(year, e, eventData);
+					displayDetails(year, e, eventData);
 				}
 				updateHeight(year);
 			});
@@ -163,7 +164,7 @@ function showCVData(cvData, showDetails) {
 			let yearData = cvData.years[y];
 			for (let e = 0; e < yearData.events.length; e++) {
 				let eventData = yearData.events[e];
-				showDescription(yearData.year, e, eventData);
+				displayDetails(yearData.year, e, eventData);
 			}
 			updateHeight(yearData.year);
 		}
@@ -171,21 +172,29 @@ function showCVData(cvData, showDetails) {
 		for (let y = 0; y < cvData.years.length; y++) {
 			let yearData = cvData.years[y];
 			for (let e = 0; e < yearData.events.length; e++) {
-				$("#content"+yearData.year+ " .event-description").remove();
+				removeDetails(yearData.year);
 			}
 			updateHeight(yearData.year);
 		}
 	}
 }
 
-function showDescription(year, e, eventData) {
-	// $("#"+year+"_"+e).after("<p class='event-dates' id='dates"+year+"_"+e+"'>"+eventData.month+" "+year+" - "+endDateText(eventData.endMonth, eventData.endYear)+"</p>");
+function removeDetails(year) {
+	$("#content"+year+ " .event-dates").remove();
+	$("#content"+year+ " .event-description").remove();
+}
+
+function displayDetails(year, e, eventData) {
 	$("#"+year+"_"+e).after("<p class='event-description' id='desc"+year+"_"+e+"'>"+eventData.description+"</p>");
+	$("#"+year+"_"+e).after("<p class='event-dates' id='dates"+year+"_"+e+"'>"+dateText(eventData.month, year)+" - "+dateText(eventData.endMonth, eventData.endYear)+"</p>");
 }
 
 function updateHeight(year) {
 	let height = 10;
 	$("#content"+year + " .event-title").each(function() {
+		height += $(this).outerHeight() + 10;
+	});
+	$("#content"+year + " .event-dates").each(function() {
 		height += $(this).outerHeight() + 10;
 	});
 	$("#content"+year + " .event-description").each(function() {
@@ -220,7 +229,7 @@ function expand() {
 	}
 }
 
-function endDateText(monthNum, year) {
+function dateText(monthNum, year) {
 	const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	if (monthNum == "") return "present";
 	return months[monthNum-1] + " " + year;

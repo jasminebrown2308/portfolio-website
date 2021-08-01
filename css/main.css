@@ -273,6 +273,10 @@ i[id^=chevron] {
 	padding: 0 2vw;
 }
 
+#options-container {
+	display: flex;
+}
+
 /* Custom checkboxes */
 .category-label {
 	display: block;
@@ -439,6 +443,51 @@ i[id^=chevron] {
 	cursor: pointer;
 }
 
+.event-dates {
+	font-size: 14px;
+	font-weight: 600;
+	color: #a6ddc6;
+}
+
+@media screen and (max-width: 850px) {
+	/* Display the different options vertically rather than on the same line */
+	#cv-options {
+		display: block;
+	}
+
+	#cv-download-btn {
+		margin-bottom: 2vh;
+	}
+
+	#expand-btn {
+		margin-left: 2vw;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.year {
+		width: 0;
+		background-color: unset;
+	}
+
+	.year h3 {
+		display: none;
+	}
+
+	#options-container {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#categories {
+		grid-template-columns: auto;
+		grid-row-gap: 2vh;
+		margin-bottom: 5vh;
+	}
+}
+
+
 /***** CONTACT SECTION *****/
 
 #contact {
@@ -542,7 +591,7 @@ textarea:focus {
 	width: calc(96% - 4px);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
 	#name-input, #email-input {
 		width: 70%;
 	}
