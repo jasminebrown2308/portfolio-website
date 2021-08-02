@@ -124,18 +124,6 @@ button {
 	height: calc(7vh + 24px);
 }
 
-
-
-/***** MAIN/TITLE SECTION *****/
-#main {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: #1a1a1a;
-	text-align: center;
-}
-
 #icons {
 	display: flex;
 	margin-top: 5vh;
@@ -143,7 +131,7 @@ button {
 
 .icon {
 	width: 50px;
-	padding: 2vh 1vw;
+	padding: 15px 10px;
 	margin: 10px;
 	border-radius: 5px;
 	background-color: white;
@@ -163,6 +151,35 @@ button {
 i {
 	color: #1a1a1a;
 	font-size: 40px;
+}
+
+@media screen and (max-width: 500px) {
+	/* Hamburger menu */
+
+
+
+	h1 {
+		font-size: 70px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#icons {
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+}
+
+
+
+/***** MAIN/TITLE SECTION *****/
+#main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #1a1a1a;
+	text-align: center;
 }
 
 i[id^=chevron] {
