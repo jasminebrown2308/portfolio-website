@@ -16,10 +16,7 @@ let allData = {"years": [
 		"description": "I was a GCSE Maths (and sometimes Science) tutor, which involved planning and preparing lessons, explaining topics in a simplified way, and giving advice for exam and revision techniques."},
 		{"month": 9, "endMonth": "", "endYear": "", "category": ["education"],
 		"title": "🎓&emsp;Joined the University of Warwick",
-		"description": "Began my first year at Warwick, studying BSc Computer Science."},
-		{"month": 9, "endMonth": "", "endYear": "", "category": ["jobs"],
-		"title": "🥤&emsp;Started working at the Mixing Jug",
-		"description": "Became an Events Catering Assistant at a smoothie and coffee bar, where I was part of a small team serving high volumes of customers at busy events."}
+		"description": "Began my first year at Warwick, studying BSc Computer Science."}
 	]},
 	{"year": 2019, "events": [
 		{"month": 9, "endMonth": 8, "endYear": 2018, "category": ["jobs"],
