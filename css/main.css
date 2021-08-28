@@ -6,7 +6,7 @@ html {
 
 body {
 	margin: 0;
-	--accent-color: #caebdd;
+	--accent-colour: #caebdd;
 }
 
 h1, h2, h3, h6, input, label {
@@ -44,7 +44,7 @@ h6 {
 }
 
 ::selection {
-	background-color: var(--accent-color);
+	background-color: var(--accent-colour);
 }
 
 h1::selection {
@@ -106,7 +106,7 @@ button {
 	display: block;
 	content: '';
 	width: 0;
-	border-bottom: 2px solid var(--accent-color);
+	border-bottom: 2px solid var(--accent-colour);
 	-webkit-transition: width 0.2s ease;
 	-ms-transition: width 0.2s ease;
 	-moz-transition: width 0.2s ease;
@@ -145,7 +145,7 @@ button {
 
 .icon:hover {
 	transform: scale(1.1);
-	background-color: var(--accent-color);
+	background-color: var(--accent-colour);
 }
 
 i {
@@ -155,9 +155,6 @@ i {
 
 @media screen and (max-width: 500px) {
 	/* Hamburger menu */
-
-
-
 	h1 {
 		font-size: 70px;
 	}
@@ -169,6 +166,8 @@ i {
 		grid-template-columns: auto auto;
 	}
 }
+
+
 
 /***** MAIN/TITLE SECTION *****/
 #main {
@@ -182,12 +181,12 @@ i {
 
 i[id^=chevron] {
 	position: relative;
-	color: var(--accent-color);
-	-webkit-transition: all 0,3s ease-in;
-	-ms-transition: all 0,3s ease-in;
-	-moz-transition: all 0,3s ease-in;
-	-o-transition: all 0,3s ease-in;
-	transition: all 0,3s ease-in;
+	color: var(--accent-colour);
+	-webkit-transition: all 0.25s ease-in;
+	-ms-transition: all 0.25s ease-in;
+	-moz-transition: all 0.25s ease-in;
+	-o-transition: all 0.25s ease-in;
+	transition: all 0.25s ease-in;
 }
 
 #chevron-3 {

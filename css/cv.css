@@ -60,7 +60,7 @@
 }
 
 .category-label input:checked ~ .checkmark {
-	background-color: var(--accent-color);
+	background-color: var(--accent-colour);
 }
 
 .category-label:hover input ~ .checkmark {
@@ -167,8 +167,8 @@
 	width: calc(80% - 15px);
 	-webkit-transition: height 0.3s ease;
 	-ms-transition: height 0.3s ease;
-	-moz-transition: none height 0.3s ease;
-	-o-transition: none height 0.3s ease;
+	-moz-transition: height 0.3s ease;
+	-o-transition: height 0.3s ease;
 	transition: height 0.3s ease;
 }
 
@@ -189,6 +189,15 @@
 	border-radius: 50%;
 	z-index: 1;
 	margin-right: -31px;
+	-webkit-transition: background-color 0.2s ease;
+	-ms-transition: background-color 0.2s ease;
+	-moz-transition: background-color 0.2s ease;
+	-o-transition: background-color 0.2s ease;
+	transition: background-color 0.2s ease;
+}
+
+.content .event-title:hover::before {
+	background-color: var(--accent-colour);
 }
 
 .event-title {
