@@ -172,10 +172,6 @@
 	transition: height 0.3s ease;
 }
 
-.content p {
-	padding: 0px 20px;
-}
-
 .content .event-title::before { /* add circles on the timeline */
 	content: '';
 	display: inline-block;
@@ -201,9 +197,7 @@
 }
 
 .event-title {
-	font-family: 'Raleway', sans-serif;
-	font-size: 18px;
-	font-weight: 500;
+	padding: 0px 20px;
 	cursor: pointer;
 }
 

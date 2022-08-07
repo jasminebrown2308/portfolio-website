@@ -2,12 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"> <title>Jasmine Brown - Portfolio</title>
+        <link rel="stylesheet" href="css/core.css" type="text/css">
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="css/projects.css" type="text/css">
         <link rel="stylesheet" href="css/cv.css" type="text/css">
         <link rel="stylesheet" href="css/contact.css" type="text/css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://kit.fontawesome.com/94e3ce4c95.js" crossorigin="anonymous"></script>
+        <script src="js/typing.js"></script>
         <script src="js/scroll.js"></script>
         <script src="js/timeline.js"></script>
         <script src="js/projects.js"></script>
@@ -42,6 +44,7 @@
 		<!-- MAIN SECTION -->
 		<div class="section" id="main">
     		<h1>Jasmine Brown</h1>
+    		<h1 id="subtitle">Software Engineer</h1>
     		<div id="icons">
     			<a href="mailto:jasminebrown2308@gmail.com">
 	    			<div class="icon">
@@ -66,9 +69,9 @@
     		</div>
     		<button id="scroll-down" onclick="jumpToSection('about')">
 	    		<div>
-	    			<i id="chevron-3" class="fas fa-chevron-down"></i>
-	    			<i id="chevron-2" class="fas fa-chevron-down"></i>
-	    			<i id="chevron-1" class="fas fa-chevron-down"></i>
+	    			<i id="chevron-down-3" class="fas fa-chevron-down"></i>
+	    			<i id="chevron-down-2" class="fas fa-chevron-down"></i>
+	    			<i id="chevron-down-1" class="fas fa-chevron-down"></i>
 	    		</div>
 	    	</button>
     	</div>
@@ -83,21 +86,33 @@
     	<!-- PROJECTS SECTION -->
     	<div id="projects" class="section">
     		<h2>Projects</h2>
+			<button id="scroll-prev" onclick="prevProject()">
+	    		<div>
+	    			<i id="chevron-left-3" class="fas fa-chevron-left"></i>
+	    			<i id="chevron-left-2" class="fas fa-chevron-left"></i>
+	    			<i id="chevron-left-1" class="fas fa-chevron-left"></i>
+	    		</div>
+    		</button>
     		<div id="projects-container">
-    			<div class="project web-project" id="portfolio-website">
-
+    			<div class="project" id="proj-prev" onclick="prevProject()">
+    				<img id="proj-prev-img" />
     			</div>
-    			<div class="project app-project" id="otium-circle-magazine">
-    				
+    			<div class="project" id="proj-main">
+    				<img id="proj-main-img" />
+    				<h3 id="proj-main-title"></h3>
+    				<h4 id="proj-main-subtitle"></h4>
     			</div>
-    			<div class="project web-project" id="web-dev-coursework">
-    				<img src="images/your-chores/5-assigned-chores.png" height="100%">
-    			</div>
-    			<div class="project app-project" id="social-scheduling">
-    				<img src="images/social-scheduling/9-join-availability.png" height="100%">
-
+    			<div class="project" id="proj-next" onclick="nextProject()">
+    				<img id="proj-next-img" />
     			</div>
     		</div>
+			<button id="scroll-next" onclick="nextProject()">
+	    		<div>
+	    			<i id="chevron-right-3" class="fas fa-chevron-right"></i>
+	    			<i id="chevron-right-2" class="fas fa-chevron-right"></i>
+	    			<i id="chevron-right-1" class="fas fa-chevron-right"></i>
+	    		</div>
+	    	</button>
     	</div>
     	<br>
 

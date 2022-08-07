@@ -57,23 +57,23 @@ input {
 input[type=submit] {
 	width: 100%;
 	border-radius: 5px;
-	border: 1px solid #666666;
+	border: 1px solid #1a1a1a;
 	background-color: var(--accent-colour);
 	font-weight: 500;
 	white-space: normal;
 	text-transform: uppercase;
 	cursor: pointer;
 
-	-webkit-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
+	-webkit-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 input[type=submit]:hover {
-	background-color: #a6ddc6;
-	border-color: #1a1a1a
+	background-color: #1a1a1a;
+	color: white;
 }
 
 textarea {

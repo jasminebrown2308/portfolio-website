@@ -1,11 +1,25 @@
 let allData = {"years": [
+	{"year": 2022, "events": [
+		{"month": 3, "endMonth": 7, "endYear": 2023, "category": ["extra"],
+		"title": "💃&emsp;Joined Warwick Tap's exec and teaching teams",
+		"description": "After being an active member of the society, including being part of our Intermediate competition team, I was elected onto the exec team for 2022-23 as Costumes & Kit Coordinator. My role is to coordinate with teachers and society members to design, source and distribute costumes and tap kit. I've also been selected as a teacher for the All Levels Technical Fun class from September."},
+		{"month": 7, "endMonth": 7, "endYear": 2022, "category": ["extra"],
+		"title": "🏆&emsp;Named as an MLH Top 50 Hacker",
+		"description": "I was named one of MLH's Top 50 Hackers globally in 2022 (out of 150,000+ hackers worldwide). This was in recognition of my contribution to the hacker community through organising WarwickHACK and leading the WarwickTECH guild at MLH's Global Hack Weeks."},
+		{"month": 6, "endMonth": 9, "endYear": 2022, "category": ["workexp", "jobs"],
+		"title": "👩‍💼&emsp;Interned as an SDE at Amazon",
+		"description": "I'm spending this summer as a Software Development Engineer intern at Amazon in London. My role is within Prime Video, in the Video Subscriptions Offers team."}
+		]},
 	{"year": 2021, "events": [
-		{"month": 7, "endMonth": "", "endYear": "", "category": ["workexp", "jobs"],
-		"title": "📱&emsp;Started as an app developer intern at Otium Circle",
-		"description": "Despite having no prior app development experience, I learnt to develop mobile apps for iOS and Android and developed new features for the startup's app, including a magazine to drive community engagement and provide entertainment within the app."},
-		{"month": 7, "endMonth": "", "endYear": "", "category": ["workexp", "jobs"],
-		"title": "👩‍💻&emsp;Became a web assistant at Warwick Students' Union",
-		"description": "As a member of the Communications & Marketing team, my role entails adding pages, events and news articles to the SU website, updating existing content and creating email templates."},
+		{"month": 9, "endMonth": 4, "endYear": 2022, "category": ["workexp", "extra"],
+		"title": "🚀&emsp;Became Principal of WarwickTECH",
+		"description": "In my role as Principal, I was responsible for all on-campus activities, primarily the organisation of our first-ever hybrid hackathon, WarwickHACK 2022. I recruited a team of seven students (plus external mentors and judges); secured sponsorship to cover event costs; formed parternships with organisations and societies to help us run the event; and acted as the main point of contact for everyone involved to resolve all queries and issues. We put on a fantastic hackathon, with 210 sign-ups, some super cool projects created during the weekend, and great feedback from our attendees!"},
+		{"month": 7, "endMonth": 9, "endYear": 2021, "category": ["workexp", "jobs"],
+		"title": "📱&emsp;Interned as an app developer at Otium Circle",
+		"description": "I learnt to develop native mobile apps for iOS and Android and implemented new features for the startup's app, primarily a magazine to drive community engagement and provide entertainment within the app. Working from a fairly broad initial brief, I designed the front-end, implemented the back-end (using Firebase), incorporated feedback then deployed the feature to app stores. I developed useful skills including collaborative version control, researching new concepts, and debugging a large codebase."},
+		{"month": 7, "endMonth": 6, "endYear": 2022, "category": ["workexp", "jobs"],
+		"title": "👩‍💻&emsp;Started as a Web Assistant at Warwick Students' Union",
+		"description": "As part of the Communications and Marketing team at Warwick SU, I've worked on various projects, including developing microsites for key SU events such as Varsity and Welcome Week; co-ordinating the redesign of the Student Voice website section; and improving our election nomination and voting processes. As well as these larger projects, I also respond to day-to-day requests such as updating content and email templates; fixing bugs; and providing technical support to staff and students."},
 		{"month": 6, "endMonth": "", "endYear": "", "category": ["extra", "workexp"],
 		"title": "💻&emsp;Joined WarwickTECH",
 		"description": "Became an Associate at WarwichTECH, a student-led angel fund and tech hub at the University of Warwick."},
@@ -13,18 +27,18 @@ let allData = {"years": [
 	{"year": 2020, "events": [
 		{"month": 1, "endMonth": 11, "endYear": 2020, "category": ["jobs"],
 		"title": "📐&emsp;Started Maths tutoring",
-		"description": "I was a GCSE Maths (and sometimes Science) tutor, which involved planning and preparing lessons, explaining topics in a simplified way, and giving advice for exam and revision techniques."},
+		"description": "I was a private GCSE Maths (and sometimes Science) tutor, which involved planning lessons, simplifying and explaining concepts to improve understanding, boosting confidence, and working together to build effective strategies for exams and revision. My Year 11 student improved from a grade 2 to a passing grade 4 within the space of a year, even in spite of the pandemic!"},
 		{"month": 9, "endMonth": "", "endYear": "", "category": ["education"],
 		"title": "🎓&emsp;Joined the University of Warwick",
-		"description": "Began my first year at Warwick, studying BSc Computer Science."}
+		"description": "Started my BSc Computer Science degree at Warwick, where I studied modules including Software Engineering, Artificial Intelligence, Data Structures & Algorithms, Web Development and Databases."}
 	]},
 	{"year": 2019, "events": [
-		{"month": 9, "endMonth": 8, "endYear": 2018, "category": ["jobs"],
+		{"month": 9, "endMonth": 8, "endYear": 2020, "category": ["jobs"],
 		"title": "☕️&emsp;Began working at Mote Park Café",
-		"description": "While I was in sixth form, I had a weekend and summer job as a Café Assistant at Mote Park, which involved preparing and serving food and drinks, working on the tills, and keeping the café clean, tidy and stocked up. As part of the role, in December 2019 I also helped with catering for the Christmas at Bedgebury event at Bedgebury Café."},
+		"description": "While I was in sixth form, I had a part-time job as a Café Assistant at Mote Park, which involved preparing and serving food and drinks, taking orders and payments on the tills, and keeping the café clean, tidy and stocked up. Working as part of a team in hospitality in such a fast-paced environment gave me great communication and customer service skills."},
 		{"month": 7, "endMonth": 7, "endYear": 2019, "category": ["workexp"],
 		"title": "🔥&emsp;Work placement at Firemind",
-		"description": "I worked alongside a designer and web developer to create simple web components such as animated forms and navigation bars using HTML, CSS and basic JavaScript." }
+		"description": "I worked alongside a designer and web developer to create simple web components such as animated forms and navigation bars using HTML, CSS and basic JavaScript. This was only a week-long experience, but it was super exciting as it was my first taste of web development and working at a tech company." }
 	]},
 	{"year": 2018, "events": [
 		{"month": 9, "endMonth": 8, "endYear": 2020, "category": ["education"],
@@ -135,7 +149,7 @@ function showCVData(cvData, showDetails) {
 		// Iterate through each event in the year
 		for (let e = 0; e < yearData.events.length; e++) {
 			let eventData = yearData.events[e];
-			$("#content"+year).append("<p class='event-title' id='"+year+"_"+e+"'>"+eventData.title+"</p>");
+			$("#content"+year).append("<h4 class='event-title' id='"+year+"_"+e+"'>"+eventData.title+"</h4>");
 			if (!showDetails) {
 				displayDetails(year, e, eventData);
 			}
@@ -183,19 +197,24 @@ function removeDetails(year) {
 
 function displayDetails(year, e, eventData) {
 	$("#"+year+"_"+e).after("<p class='event-description' id='desc"+year+"_"+e+"'>"+eventData.description+"</p>");
-	$("#"+year+"_"+e).after("<p class='event-dates' id='dates"+year+"_"+e+"'>"+dateText(eventData.month, year)+" - "+dateText(eventData.endMonth, eventData.endYear)+"</p>");
+
+	if ((eventData.endYear != year) || (eventData.endMonth != eventData.month)) {
+		$("#"+year+"_"+e).after("<p class='event-dates' id='dates"+year+"_"+e+"'>"+dateText(eventData.month, year)+" - "+dateText(eventData.endMonth, eventData.endYear)+"</p>");
+	} else { // if event was only one month
+		$("#"+year+"_"+e).after("<p class='event-dates' id='dates"+year+"_"+e+"'>"+dateText(eventData.month, year)+"</p>");
+	}
 }
 
 function updateHeight(year) {
-	let height = 10;
+	let height = 0;
 	$("#content"+year + " .event-title").each(function() {
-		height += $(this).outerHeight() + 10;
+		height += $(this).outerHeight() + 20;
 	});
 	$("#content"+year + " .event-dates").each(function() {
-		height += $(this).outerHeight() + 10;
+		height += $(this).outerHeight() + 20;
 	});
 	$("#content"+year + " .event-description").each(function() {
-		height += $(this).outerHeight() + 15;
+		height += $(this).outerHeight() + 20;
 	});
 
 	$("#content"+year).css("height", height+"px");
