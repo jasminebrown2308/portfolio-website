@@ -14,7 +14,7 @@ let allProjects = [
 		"type": "web-project",
 		"dates": "January - March 2022",
 		"image": "1-dashboard.png",
-		"technologies": "React Flask PostgreSQL Python JavaScript CSS",
+		"technologies": ["React", "Flask", "PostgreSQL", "Python", "JavaScript", "CSS"],
 	},
 	{
 		"id": "personal-portfolio",
@@ -23,7 +23,7 @@ let allProjects = [
 		"type": "web-project",
 		"dates": "June 2021 - present",
 		"image": "1-homepage.png",
-		"technologies": "HTML CSS JavaScript"
+		"technologies": ["HTML", "CSS", "JavaScript"]
 	},
 	{
 		"id": "hello-demo",
@@ -31,7 +31,8 @@ let allProjects = [
 		"subtitle": "iOS & Android Application",
 		"type": "app-project",
 		"dates": "June 2021",
-		"image": "1-select-language.png"
+		"image": "1-select-language.png",
+		"technologies": ["Swift", "Kotlin", "SwiftUI"]
 	},
 	{
 		"id": "your-chores",
@@ -39,7 +40,8 @@ let allProjects = [
 		"subtitle": "Web Application",
 		"type": "web-project",
 		"dates": "February - March 2021",
-		"image": "5-assigned-chores.png"
+		"image": "5-assigned-chores.png",
+		"technologies": ["HTML", "CSS", "JavaScript", "PHP", "PostgreSQL"]
 	},
 	{
 		"id": "social-scheduling",
@@ -95,6 +97,7 @@ function fillProjects() {
 	$("#proj-main-img").attr("src", getImageSrc(mainProject));
 	$("#proj-main-title").text(mainProject.title);
 	$("#proj-main-subtitle").text(mainProject.subtitle);
+	$("#proj-next-img").attr("src", getImageSrc(allProjects[projectNext]));
 }
 
 function getImageSrc(project) {
@@ -104,21 +107,11 @@ function getImageSrc(project) {
 function nextProject() {
 	projectN = checkUpperBound(projectN+1);
 	setPrevNext();
-
-	fillProjects();
-
-	// $(".project:nth-child("+lastN+")").css("opacity", 0);
-	// $(".project:nth-child("+projectN+")").css("opacity", 1);
 }
 
 function prevProject() {
 	projectN = checkLowerBound(projectN-1);
 	setPrevNext();
-
-	fillProjects();
-
-	// $(".project:nth-child("+lastN+")").css("opacity", 0);
-	// $(".project:nth-child("+projectN+")").css("opacity", 1);
 }
 
 function checkUpperBound(projectNum) {
@@ -138,5 +131,7 @@ function checkLowerBound(projectNum) {
 function setPrevNext() {
 	projectNext = checkUpperBound(projectN+1);
 	projectPrev = checkLowerBound(projectN-1);
+
+	fillProjects();
 }
 

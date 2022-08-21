@@ -11,7 +11,10 @@
 }
 
 .project {
-	max-width: 100%;
+	max-width: 85vh;
+	padding: 20px;
+	border-radius: 10px;
+	position: absolute;
 
 	-webkit-transition: background-color 0.25s ease;
 	-ms-transition: background-color 0.25s ease;
@@ -20,14 +23,37 @@
 	transition: background-color 0.25s ease;
 }
 
+#proj-main {
+	z-index: 2;
+	left: auto;
+	right: auto;
+	min-width: 80vh;
+}
+
 #proj-main-img {
+	display: block;
 	height: 45vh;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto 20px auto;
+	border-radius: 2px;
+}
+
+#proj-next {
+	min-width: 40vh;
+	max-width: 57vh;
+	z-index: 1;
+	right: -2vw;
+	top: 10vh;
+}
+
+#proj-next-img {
+	display: block;
+	height: 30vh;
+	margin: 0 auto 0 auto;
 }
 
 .project:hover {
 	background-color: var(--accent-colour);
+	background-color: rgba(202, 235, 221, 0.5);
 	cursor: pointer;
 }
 
@@ -42,7 +68,7 @@
 }
 
 
-/** Scroll right and left icons/animation **/
+/** Next and prev chevron animations **/
 #scroll-next, #scroll-prev {
 	position: absolute;
 	padding: 20vh 10px;

@@ -19,7 +19,7 @@ let allData = {"years": [
 		"description": "I learnt to develop native mobile apps for iOS and Android and implemented new features for the startup's app, primarily a magazine to drive community engagement and provide entertainment within the app. Working from a fairly broad initial brief, I designed the front-end, implemented the back-end (using Firebase), incorporated feedback then deployed the feature to app stores. I developed useful skills including collaborative version control, researching new concepts, and debugging a large codebase."},
 		{"month": 7, "endMonth": 6, "endYear": 2022, "category": ["workexp", "jobs"],
 		"title": "👩‍💻&emsp;Started as a Web Assistant at Warwick Students' Union",
-		"description": "As part of the Communications and Marketing team at Warwick SU, I've worked on various projects, including developing microsites for key SU events such as Varsity and Welcome Week; co-ordinating the redesign of the Student Voice website section; and improving our election nomination and voting processes. As well as these larger projects, I also respond to day-to-day requests such as updating content and email templates; fixing bugs; and providing technical support to staff and students."},
+		"description": "I've worked on various projects, including developing microsites for key SU events such as Varsity and Welcome Week; co-ordinating the redesign of the Student Voice website section; and improving our election nomination and voting processes. As well as these larger projects, I also provided day-to-day web requests such as updating content and email templates; fixing bugs; and providing technical support to staff and students."},
 		{"month": 6, "endMonth": "", "endYear": "", "category": ["extra", "workexp"],
 		"title": "💻&emsp;Joined WarwickTECH",
 		"description": "Became an Associate at WarwichTECH, a student-led angel fund and tech hub at the University of Warwick."},
@@ -43,7 +43,7 @@ let allData = {"years": [
 	{"year": 2018, "events": [
 		{"month": 9, "endMonth": 8, "endYear": 2020, "category": ["education"],
 		"title": "📘&emsp;Started A Levels",
-		"description": "I took A Levels in Maths, Physics, Computer Science and Further Maths, plus an EPQ on the topic 'How can machine learning be applied to reduce crime?'. I achieved grades A*A*A*A and an A* in my EPQ."},
+		"description": "I took A Levels in Maths, Physics, Computer Science and Further Maths, plus an Extended Project Qualification (EPQ) studying how machine learning can be applied to reduce crime. I achieved grades A*A*A*A plus an A* in my EPQ."},
 		{"month": 10, "endMonth": 4, "endYear": 2019, "category": ["workexp"],
 		"title": "🐆&emsp;Work placement at Cougar Automation",
 		"description": "This was a 6-month work experience placement every Wednesday afternoon where I worked on the SCADA user interface for a water treatment plant and helped to set up Profibus networks as well as helping with various tasks around the office."}
@@ -56,7 +56,7 @@ let allData = {"years": [
 	{"year": 2016, "events": [
 		{"month": 10, "endMonth": 6, "endYear": 2017, "category": ["extra"],
 		"title": "📖&emsp;Volunteered at Madginford Library",
-		"description": "I volunteered at my local library as part of my Duke of Edinburgh's Award, where I ran an after-school activity club for primary school children."}
+		"description": "I volunteered at my local library as part of my Silver Duke of Edinburgh's Award, where I ran an after-school activity club for primary school children."}
 	]},
 	{"year": 2015, "events": [
 		{"month": 9, "endMonth": 8, "endYear": 2018, "category": ["education"],
@@ -66,17 +66,17 @@ let allData = {"years": [
 	{"year": 2013, "events": [
 		{"month": 9, "endMonth": 3, "endYear": 2020, "category": ["education"],
 		"title": "📕&emsp;Joined Invicta Grammar School",
-		"description": "Joined my secondary school, where I stayed for 7 years (including sixth form). During my time at Invicta, I was involved in many clubs and activities including music, debating and peer mentoring as well as completing my Bronze and Silver Duke of Edinburgh's awards."}
+		"description": "Joined my secondary school, where I stayed for 7 years (including sixth form). During my time at Invicta, I was involved in many clubs and activities including music, debating, peer mentoring and Duke of Edinburgh's Awards."}
 	]},
 	{"year": 2011, "events": [
 		{"month": 9, "endMonth": "", "endYear": "", "category": ["extra"],
 		"title": "🎷&emsp;Started learning saxophone",
-		"description": "In Year 5, I started learning to play the alto saxophone. I continued having lessons for over 7 years until I reached Grade 8, and then kept playing in my school orchestra and Big Band where I performed at many school concerts and other events."},
+		"description": "I started learning to play the alto saxophone in primary school. I continued having lessons for over 7 years until I reached Grade 8, and then kept playing in my school orchestra and Big Band where I performed at many concerts and events."},
 	]},
 	{"year": 2009, "events": [
 		{"month": 9, "endMonth": 7, "endYear": 2017, "category": ["extra"],
 		"title": "👯‍♀️&emsp;Joined Directions Performing Arts",
-		"description": "Started learning Ballet, Tap and Modern (and, later on, Pointe) at Directions. This included performing in shows at the Hazlitt Theatre plus many local fayres and other events. I also achieved Grade 5 Tap, Ballet and Modern with Distinctions."}
+		"description": "Started learning Ballet, Tap and Modern (and, later on, Pointe) at Directions. This included performing in shows at the Hazlitt Theatre and other events. I also achieved Grade 5 Tap, Ballet and Modern with Distinctions."}
 	]}
 ]};
 let selectedData = allData;

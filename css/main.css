@@ -12,7 +12,7 @@
 	font-weight: 400;
 }
 
-#subtitle::after {
+#subtitle:not(.no-caret)::after {
 	content: "|";
 	margin-left: 0.05em;
 	font-weight: 700;

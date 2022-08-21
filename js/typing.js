@@ -23,6 +23,8 @@ async function startTypingAnimation() {
 		await backspace(headlines[s], headlines[s].length);
 		await write(headlines[s+1], 0);
 	}
+
+	$("#subtitle").addClass("no-caret");
 }
 
 function backspace(str, i) {
