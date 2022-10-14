@@ -4,7 +4,7 @@ $(function() {
 
 const headlines = [
 	"Software Engineer",
-	"SDE Intern at Amazon",
+	"Ex-Amazon SDE Intern",
 	"Computer Science Student",
 	"Student at Warwick Uni",
 	"Software Engineer"

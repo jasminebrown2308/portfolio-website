@@ -5,55 +5,43 @@
 
 #projects-container {
 	position: absolute;
-	height: ;
 	width: calc(100% - 10vw - 190px);
 	left: calc(5vw + 95px);
 }
 
 .project {
-	max-width: 85vh;
+	height: 55vh;
 	padding: 20px;
 	border-radius: 10px;
+	background-color: var(--accent-colour);
 	position: absolute;
+	left: 50%;
 
-	-webkit-transition: background-color 0.25s ease;
-	-ms-transition: background-color 0.25s ease;
-	-moz-transition: background-color 0.25s ease;
-	-o-transition: background-color 0.25s ease;
-	transition: background-color 0.25s ease;
+	-webkit-transition: background-color, transform 0.25s ease;
+	-ms-transition: background-color, transform 0.25s ease;
+	-moz-transition: background-color, transform 0.25s ease;
+	-o-transition: background-color, transform 0.25s ease;
+	transition: background-color, transform 0.25s ease;
 }
 
-#proj-main {
-	z-index: 2;
-	left: auto;
-	right: auto;
-	min-width: 80vh;
+.proj-img-container {
+	height: 40vh;
+	width: 50vw;
+	display: flex;
+	align-items: center;
 }
 
-#proj-main-img {
+.proj-img {
 	display: block;
-	height: 45vh;
+	max-height: 40vh;
+	max-width: 50vw;
 	margin: 0 auto 20px auto;
 	border-radius: 2px;
 }
 
-#proj-next {
-	min-width: 40vh;
-	max-width: 57vh;
-	z-index: 1;
-	right: -2vw;
-	top: 10vh;
-}
-
-#proj-next-img {
-	display: block;
-	height: 30vh;
-	margin: 0 auto 0 auto;
-}
-
-.project:hover {
-	background-color: var(--accent-colour);
-	background-color: rgba(202, 235, 221, 0.5);
+.project.main:hover {
+	transition: transform 0.2s;
+	transform: translateX(-50%) scale(1.05) !important;
 	cursor: pointer;
 }
 
@@ -67,11 +55,18 @@
 	margin-bottom: 20px;
 }
 
+@media screen and (max-width: 660px) {
+	.prev2, .next2 {
+		opacity: 0 !important;
+	}
+}
+
 
 /** Next and prev chevron animations **/
 #scroll-next, #scroll-prev {
 	position: absolute;
 	padding: 20vh 10px;
+	z-index: 3;
 }
 #scroll-next {
 	right: 4vw;

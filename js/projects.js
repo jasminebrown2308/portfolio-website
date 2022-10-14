@@ -1,12 +1,4 @@
 let allProjects = [
-	// {
-	// 	"id": "tap-choreography",
-	// 	"title": "Tap Choreography System",
-	// 	"subtitle": "Web Application",
-	// 	"type": "web-project",
-	// 	"dates": "June 2022 - March 2023",
-	// 	"description": ""
-	// },
 	{
 		"id": "mentoring-system",
 		"title": "Mentoring System",
@@ -51,87 +43,145 @@ let allProjects = [
 		"dates": "September 2019 - March 2020",
 		"image": "9-join-availability.png",
 		"description": "test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description"
-	}
+	},
+	{
+		"id": "tappyography",
+		"title": "[In Progress] AI Tap Choreography System",
+		"subtitle": "Web Application",
+		"type": "web-project",
+		"dates": "June 2022 - March 2023",
+		"description": ""
+	},
 ];
 
-// $( function() {
-// 	for (var i = 0; i < allProjects.length; i++) {
-// 		let currentProject = allProjects[i];
-// 		let id = currentProject.id;
-// 		console.log("<div class='project " + currentProject.type + "' id='" + id + ">");
-// 		$("#projects-container").append("<div class='project " + currentProject.type + "' id='" + id + "'>");
-// 		let container = id;
-// 		if (currentProject.type == "app-project" && currentProject.image) {
-// 			$("#" + id).append("<div class='right' id='" + id + "-container'>");
-// 			container += "-container";
-// 		}
-// 		$("#" + container).append("<h3>" + currentProject.title + "</h3>");
-// 		$("#" + container).append("<h4>" + currentProject.subtitle + "</h4>");
-// 		if (currentProject.image) {
-// 			$("#" + id).append("<img src='images/" + id + "/" + currentProject.image + "'>");
-// 		}
-// 	}
-	
-// 	$(".project").click(function() {
-// 		let projectID = this.id;
-// 		console.log(projectID);
-// 	});
-// })
-
 var projectN = 0;
-var projectNext;
-var projectPrev;
-setPrevNext();
 
 $(function() {
-	fillProjects();
-	
-	$(".project").click(function() {
-		let projectID = this.id;
-		console.log(projectID);
-	});
+	createProjects();
 });
 
-function fillProjects() {
+function createProjects() {
 	let mainProject = allProjects[projectN];
-	$("#proj-main-img").attr("src", getImageSrc(mainProject));
-	$("#proj-main-title").text(mainProject.title);
-	$("#proj-main-subtitle").text(mainProject.subtitle);
-	$("#proj-next-img").attr("src", getImageSrc(allProjects[projectNext]));
+	let projectObjs = [];
+
+	allProjects.forEach(function(project, index) {
+		currentProject = '<div class="project" id="proj'+index+'">'
+			+'<div class="proj-img-container">'
+			+'<img class="proj-img" src="'+getImageSrc(project)+'" /></div>'
+			+'<h3 class="proj-title">'+project.title+'</h3>'
+			+'<h4 class="proj-main-subtitle">'+project.subtitle+'</h4>'
+    	projectObjs.push(currentProject);
+	})
+
+	$("#projects-container").append(projectObjs);
+
+	setProjectPositions(0);
 }
 
+function setProjectPositions(projectNum) {
+	const prev1Num = getPrev(projectNum);
+	const next1Num = getNext(projectNum);
+	const prev2Num = getPrev(prev1Num);
+	const next2Num = getNext(next1Num);
+
+	const main = $("#proj"+projectNum);
+	const prev1 = $("#proj"+prev1Num);
+	const prev2 = $("#proj"+prev2Num);
+	const next1 = $("#proj"+next1Num);
+	const next2 = $("#proj"+next2Num);
+
+	main.css({
+		"width": "50vw",
+		"transform": "translateX(-50%)",
+		"z-index": 2,
+		"opacity": 1,
+	}).attr({
+		"class": "project main",
+		"onclick": "expandProject("+projectNum+")"
+	});
+
+	prev1.css({
+		"opacity": 0.5,
+		"z-index": 1,
+		"transform": "translateX(-60%) scale(0.95)",
+	}).attr({
+		"class": "project prev1",
+		"onclick": "setProjectPositions("+prev1Num+")"
+	})
+
+	prev2.css({
+		"opacity": 0.25,
+		"z-index": 0,
+		"transform": "translateX(-70%) scale(0.9)",
+	}).attr({
+		"class": "project prev2",
+		"onclick": "setProjectPositions("+prev2Num+")"
+	})
+
+	next1.css({
+		"opacity": 0.5,
+		"z-index": 1,
+		"transform": "translateX(-40%) scale(0.95)",
+	}).attr({
+		"class": "project next1",
+		"onclick": "setProjectPositions("+next1Num+")"
+	})
+
+	next2.css({
+		"opacity": 0.25,
+		"z-index": 0,
+		"transform": "translateX(-30%) scale(0.9)",
+	}).attr({
+		"class": "project next2",
+		"onclick": "setProjectPositions("+next2Num+")"
+	})
+
+	if (allProjects.length > 5) {
+		visibleProjects = [projectNum, prev1Num, prev2Num, next1Num, next2Num];
+		allProjects.map((proj, index) => index).filter(x => !visibleProjects.includes(x)).forEach(function(i) {
+			$("#proj"+i).css({
+				"opacity": 0,
+				"transform": "translateX(-50%) scale(0.9)"
+			});
+		});
+	}
+
+}
+
+function expandProject(projectNum) {
+	console.log(allProjects[projectNum].id);
+
+}
+
+/** Utility functions **/
 function getImageSrc(project) {
 	return "images/" + project.id + "/" + project.image;
 }
 
 function nextProject() {
-	projectN = checkUpperBound(projectN+1);
-	setPrevNext();
+	projectN = getNext(projectN);
+	setProjectPositions(projectN);
 }
 
 function prevProject() {
-	projectN = checkLowerBound(projectN-1);
-	setPrevNext();
+	projectN = getPrev(projectN);
+	setProjectPositions(projectN);
 }
 
-function checkUpperBound(projectNum) {
+function getNext(projectNum) {
+	projectNum += 1;
 	if (projectNum >= allProjects.length) {
 		return 0;
 	}
 	return projectNum;
 }
 
-function checkLowerBound(projectNum) {
+function getPrev(projectNum) {
+	projectNum -= 1;
 	if (projectNum < 0) {
 		return allProjects.length-1;
 	}
 	return projectNum;
 }
 
-function setPrevNext() {
-	projectNext = checkUpperBound(projectN+1);
-	projectPrev = checkLowerBound(projectN-1);
-
-	fillProjects();
-}
 

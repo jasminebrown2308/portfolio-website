@@ -95,3 +95,15 @@ i[id^=chevron] {
 	display: flex;
 	flex-direction: column;
 }
+
+
+/** ABOUT SECTION **/
+.bio-container {
+	margin-top: 20px;
+	background: var(--accent-colour);
+	border-radius: 40px 0 40px 0;
+	height: 70vh;
+}
+
+
+

@@ -2,14 +2,14 @@ let allData = {"years": [
 	{"year": 2022, "events": [
 		{"month": 3, "endMonth": 7, "endYear": 2023, "category": ["extra"],
 		"title": "💃&emsp;Joined Warwick Tap's exec and teaching teams",
-		"description": "After being an active member of the society, including being part of our Intermediate competition team, I was elected onto the exec team for 2022-23 as Costumes & Kit Coordinator. My role is to coordinate with teachers and society members to design, source and distribute costumes and tap kit. I've also been selected as a teacher for the All Levels Technical Fun class from September."},
+		"description": "After being an active member of the society, including being part of our Intermediate competition team, I was elected onto the exec team for 2022-23 as Costumes & Kit Coordinator. My exec role are to coordinate with society members to design, source and distribute kit and costumes. I also teach the All Levels Technical class, where I teach new steps, help to refine technique and come up with fun combinations to practice skills."},
 		{"month": 7, "endMonth": 7, "endYear": 2022, "category": ["extra"],
 		"title": "🏆&emsp;Named as an MLH Top 50 Hacker",
 		"description": "I was named one of MLH's Top 50 Hackers globally in 2022 (out of 150,000+ hackers worldwide). This was in recognition of my contribution to the hacker community through organising WarwickHACK and leading the WarwickTECH guild at MLH's Global Hack Weeks."},
 		{"month": 6, "endMonth": 9, "endYear": 2022, "category": ["workexp", "jobs"],
 		"title": "👩‍💼&emsp;Interned as an SDE at Amazon",
-		"description": "I'm spending this summer as a Software Development Engineer intern at Amazon in London. My role is within Prime Video, in the Video Subscriptions Offers team."}
-		]},
+		"description": "I spent this summer as a Software Development Engineer intern at Amazon in London. My role within Prime Video involved designing and implementing an auditing feature to display changes to video subscription offers. I learnt loads of new skills from this project, including TypeScript and React, AWS cloud infrastructure, NoSQL databases, and APIs."}
+	]},
 	{"year": 2021, "events": [
 		{"month": 9, "endMonth": 4, "endYear": 2022, "category": ["workexp", "extra"],
 		"title": "🚀&emsp;Became Principal of WarwickTECH",
@@ -20,9 +20,6 @@ let allData = {"years": [
 		{"month": 7, "endMonth": 6, "endYear": 2022, "category": ["workexp", "jobs"],
 		"title": "👩‍💻&emsp;Started as a Web Assistant at Warwick Students' Union",
 		"description": "I've worked on various projects, including developing microsites for key SU events such as Varsity and Welcome Week; co-ordinating the redesign of the Student Voice website section; and improving our election nomination and voting processes. As well as these larger projects, I also provided day-to-day web requests such as updating content and email templates; fixing bugs; and providing technical support to staff and students."},
-		{"month": 6, "endMonth": "", "endYear": "", "category": ["extra", "workexp"],
-		"title": "💻&emsp;Joined WarwickTECH",
-		"description": "Became an Associate at WarwichTECH, a student-led angel fund and tech hub at the University of Warwick."},
 	]},
 	{"year": 2020, "events": [
 		{"month": 1, "endMonth": 11, "endYear": 2020, "category": ["jobs"],
