@@ -1,249 +1,251 @@
 #cv {
-	height: unset;
-	padding-bottom: 15vh;
+  height: unset;
+  padding-bottom: 15vh;
 }
 
 /* CV options section (options to download, show/hide categories and expand/hide details) */
 #cv-options {
-	display: flex;
+  display: flex;
 }
 
 #cv-download-btn {
-	left: 0;
-	display: flex;
-	align-items: center;
-	width: unset;
-	margin-bottom: 5vh;
-	border-radius: 10px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: unset;
+  margin-bottom: 5vh;
+  border-radius: 10px;
 }
 
 #cv-download-btn h3 {
-	font-size: 20px;
-	padding-right: 2vw;
+  font-size: 20px;
+  padding-right: 2vw;
 }
 
 #cv-download-btn i {
-	padding: 0 2vw;
+  padding: 0 2vw;
 }
 
 #options-container {
-	display: flex;
+  display: flex;
 }
 
 /* Custom checkboxes to show/hide categories */
 .category-label {
-	display: block;
-	position: relative;
-	padding-left: 35px;
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .category-label input {
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-	height: 0;
-	width: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 .checkmark {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 16px;
-	width: 16px;
-	background-color: #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #eee;
 }
 
 .category-label input:checked ~ .checkmark {
-	background-color: var(--accent-colour);
+  background-color: var(--accent-colour);
 }
 
 .category-label:hover input ~ .checkmark {
-	background-color: #a6ddc6;
+  background-color: #a6ddc6;
 }
 
 .checkmark:after {
-	content: "";
-	position: absolute;
-	display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 .category-label input:checked ~ .checkmark:after {
-	display: block;
+  display: block;
 }
 
 .category-label .checkmark:after {
-	left: 5px;
-	top: 1px;
-	width: 4px;
-	height: 8px;
-	border: solid #1a1a1a;
-	border-width: 0 2px 2px 0;
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	transform: rotate(45deg);
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid #1a1a1a;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 #categories {
-	right: 0;
-	display: grid;
-	grid-column-gap: 5vw;
-	grid-template-columns: auto auto;
-	padding: 2vh 2vw;
+  right: 0;
+  display: grid;
+  grid-column-gap: 5vw;
+  grid-template-columns: auto auto;
+  padding: 2vh 2vw;
 }
 
-.category-label, #expand-btn h3 {
-	font-weight: 400;
-	font-size: 16px;
+.category-label,
+#expand-btn h3 {
+  font-weight: 400;
+  font-size: 16px;
 }
 
 #expand-btn {
-	left: 0;
-	display: flex;
-	align-items: center;
-	width: unset;
-	margin-bottom: 5vh;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: unset;
+  margin-bottom: 5vh;
 }
 
 #expand-btn i {
-	font-size: 16px;
-	padding: 0 10px;
+  font-size: 16px;
+  padding: 0 10px;
 }
 
 /* CV timeline section */
 #years {
-	width: 100%;
+  width: 100%;
 }
 
 .year-container {
-	width: 100%;
-	display: flex;
+  width: 100%;
+  display: flex;
 }
 
 .year {
-	float: left;
-	padding: 20px 5px;
-	width: 20%;
-	margin-right: 30px;
-	border-right: solid 5px #1a1a1a;
-	background-color: #e5e5e5;
-	text-align: center;
-	position: relative;
-	transition: height 0.3s ease !important;
+  float: left;
+  padding: 20px 5px;
+  width: 20%;
+  margin-right: 30px;
+  border-right: solid 5px #1a1a1a;
+  background-color: #e5e5e5;
+  text-align: center;
+  position: relative;
+  transition: height 0.3s ease !important;
 }
 
 .year h3 {
-	width: 100%;
-	position: absolute;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-top: 0;
-	padding-bottom: 0;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
+  width: 100%;
+  position: absolute;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .year-container:first-child .year {
-	border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .year-container:last-child .year {
-	border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .content {
-	float: right;
-	width: calc(80% - 15px);
-	-webkit-transition: height 0.3s ease;
-	-ms-transition: height 0.3s ease;
-	-moz-transition: height 0.3s ease;
-	-o-transition: height 0.3s ease;
-	transition: height 0.3s ease;
+  float: right;
+  width: calc(80% - 15px);
+  -webkit-transition: height 0.3s ease;
+  -ms-transition: height 0.3s ease;
+  -moz-transition: height 0.3s ease;
+  -o-transition: height 0.3s ease;
+  transition: height 0.3s ease;
 }
 
-.content .event-title::before { /* add circles on the timeline */
-	content: '';
-	display: inline-block;
-	position: relative;
-	width: 25px;
-	height: 25px;
-	right: 67.5px;
-	background-color: white;
-	border: 3px solid black;
-	top: 9px;
-	border-radius: 50%;
-	z-index: 1;
-	margin-right: -31px;
-	-webkit-transition: background-color 0.2s ease;
-	-ms-transition: background-color 0.2s ease;
-	-moz-transition: background-color 0.2s ease;
-	-o-transition: background-color 0.2s ease;
-	transition: background-color 0.2s ease;
+.content .event-title::before {
+  /* add circles on the timeline */
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  right: 67.5px;
+  background-color: white;
+  border: 3px solid black;
+  top: 9px;
+  border-radius: 50%;
+  z-index: 1;
+  margin-right: -31px;
+  -webkit-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .content .event-title:hover::before {
-	background-color: var(--accent-colour);
+  background-color: var(--accent-colour);
 }
 
 .event-title {
-	padding: 0px 20px;
-	cursor: pointer;
+  padding: 0px 20px;
+  cursor: pointer;
 }
 
 .event-dates {
-	font-size: 14px;
-	font-weight: 600;
-	color: #a6ddc6;
+  font-size: 14px;
+  font-weight: 600;
+  color: #a6ddc6;
 }
 
 /* Media queries */
 @media screen and (max-width: 850px) {
-	/* When screen is narrower than 850px, display options vertically rather than on the same line */
-	#cv-options {
-		display: block;
-	}
+  /* When screen is narrower than 850px, display options vertically rather than on the same line */
+  #cv-options {
+    display: block;
+  }
 
-	#cv-download-btn {
-		margin-bottom: 2vh;
-	}
+  #cv-download-btn {
+    margin-bottom: 2vh;
+  }
 
-	#expand-btn {
-		margin-left: 2vw;
-	}
+  #expand-btn {
+    margin-left: 2vw;
+  }
 }
 
 @media screen and (max-width: 500px) {
-	/* When screen is narrower than 500px, hide years in the timeline to focus on the events */
-	.year {
-		width: 0;
-		background-color: unset;
-	}
+  /* When screen is narrower than 500px, hide years in the timeline to focus on the events */
+  .year {
+    width: 0;
+    background-color: unset;
+  }
 
-	.year h3 {
-		display: none;
-	}
+  .year h3 {
+    display: none;
+  }
 
-	#options-container {
-		display: block;
-	}
+  #options-container {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 400px) {
-	/* When screen is narrower than 850px, display categories in a single column instead of 2x2 rows */
-	#categories {
-		grid-template-columns: auto;
-		grid-row-gap: 2vh;
-		margin-bottom: 5vh;
-	}
+  /* When screen is narrower than 850px, display categories in a single column instead of 2x2 rows */
+  #categories {
+    grid-template-columns: auto;
+    grid-row-gap: 2vh;
+    margin-bottom: 5vh;
+  }
 }
