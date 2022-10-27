@@ -10,7 +10,7 @@ let allData = {
           category: ["extra"],
           title: "💃&emsp;Joined Warwick Tap's exec and teaching teams",
           description:
-            "After being an active member of the society, including being part of our Intermediate competition team, I was elected onto the exec team for 2022-23 as Costumes & Kit Coordinator. My exec role are to coordinate with society members to design, source and distribute kit and costumes. I also teach the All Levels Technical class, where I teach new steps, help to refine technique and come up with fun combinations to practice skills.",
+            "After being an active member of the society, including being part of our Intermediate competition team, I was elected onto the exec team for 2022-23 as Costumes & Kit Coordinator. My role is to coordinate with society members to design, source and distribute kit and costumes. I also teach the All Levels Technical class, where I teach new steps, help to refine technique and come up with fun combinations to practice skills.",
         },
         {
           month: 7,
@@ -61,7 +61,7 @@ let allData = {
           title:
             "👩‍💻&emsp;Started as a Web Assistant at Warwick Students' Union",
           description:
-            "I've worked on various projects, including developing microsites for key SU events such as Varsity and Welcome Week; co-ordinating the redesign of the Student Voice website section; and improving our election nomination and voting processes. As well as these larger projects, I also provided day-to-day web requests such as updating content and email templates; fixing bugs; and providing technical support to staff and students.",
+            "I worked on various projects, including developing microsites for key SU events such as Varsity and Welcome Week; co-ordinating the redesign of the Student Voice website section; and improving our election nomination and voting processes. As well as these larger projects, I also completed day-to-day web requests such as updating pages and email templates; fixing bugs; providing technical support; and training staff on how to use the system.",
         },
       ],
     },
@@ -73,9 +73,9 @@ let allData = {
           endMonth: 11,
           endYear: 2020,
           category: ["jobs"],
-          title: "📐&emsp;Started Maths tutoring",
+          title: "📐&emsp;Started Maths and Science tutoring",
           description:
-            "I was a private GCSE Maths (and sometimes Science) tutor, which involved planning lessons, simplifying and explaining concepts to improve understanding, boosting confidence, and working together to build effective strategies for exams and revision. My Year 11 student improved from a grade 2 to a passing grade 4 within the space of a year, even in spite of the pandemic!",
+            "I was a private GCSE Maths and Science tutor to younger students. This involved planning lessons, simplifying and explaining concepts to improve understanding, boosting confidence, and working together to build effective strategies for exams and revision.",
         },
         {
           month: 9,
@@ -84,7 +84,7 @@ let allData = {
           category: ["education"],
           title: "🎓&emsp;Joined the University of Warwick",
           description:
-            "Started my BSc Computer Science degree at Warwick, where I studied modules including Software Engineering, Artificial Intelligence, Data Structures & Algorithms, Web Development and Databases.",
+            "Started my BSc Computer Science degree at Warwick, where I studied modules including Software Engineering, AI, Machine Learning, Information Structures, Algorithms, Neural Computing, Web Development and Databases. I am on track for a first class degree, with an average of 77% so far.",
         },
       ],
     },
@@ -124,13 +124,22 @@ let allData = {
             "I took A Levels in Maths, Physics, Computer Science and Further Maths, plus an Extended Project Qualification (EPQ) studying how machine learning can be applied to reduce crime. I achieved grades A*A*A*A plus an A* in my EPQ.",
         },
         {
+          month: 9,
+          endMonth: 7,
+          endYear: 2020,
+          category: ["extra"],
+          title: "⚙️&emsp;Awarded Arwkright Engineering Scholarship",
+          description:
+            "Arwright Scholarships are awarded to future leaders in engineering and computing. Through this, I had access to various opportunities including mentorship from an industry expert and a Girls into Engineering residential at Royal Holloway University.",
+        },
+        {
           month: 10,
           endMonth: 4,
           endYear: 2019,
           category: ["workexp"],
           title: "🐆&emsp;Work placement at Cougar Automation",
           description:
-            "This was a 6-month work experience placement every Wednesday afternoon where I worked on the SCADA user interface for a water treatment plant and helped to set up Profibus networks as well as helping with various tasks around the office.",
+            "I completed a 6-month work experience placement every Wednesday afternoon where I worked on the SCADA user interface for a water treatment plant and helped to set up Profibus networks. I really enjoyed this first taste of working in engineering!",
         },
       ],
     },
@@ -145,20 +154,6 @@ let allData = {
           title: "🎂&emsp;Started working at Tiny Town",
           description:
             "My first job was working at a children's play centre, where I led children's birthday parties as well as serving customers in the coffee shop and reception.",
-        },
-      ],
-    },
-    {
-      year: 2016,
-      events: [
-        {
-          month: 10,
-          endMonth: 6,
-          endYear: 2017,
-          category: ["extra"],
-          title: "📖&emsp;Volunteered at Madginford Library",
-          description:
-            "I volunteered at my local library as part of my Silver Duke of Edinburgh's Award, where I ran an after-school activity club for primary school children.",
         },
       ],
     },

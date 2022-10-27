@@ -20,7 +20,8 @@ label {
 }
 
 p,
-textarea {
+textarea,
+li {
   font-family: "Lato", sans-serif;
 }
 
@@ -105,7 +106,7 @@ button {
   width: 96vw;
   padding: 2vh 2vw 0vh 2vw;
   background-color: #1a1a1a;
-  z-index: 2;
+  z-index: 3;
 }
 
 .menu-text {

@@ -1,4 +1,4 @@
-let allProjects = [
+const allProjects = [
   {
     id: "mentoring-system",
     title: "Mentoring System",
@@ -6,14 +6,11 @@ let allProjects = [
     type: "web-project",
     dates: "January - March 2022",
     image: "1-dashboard.png",
-    technologies: [
-      "React",
-      "Flask",
-      "PostgreSQL",
-      "Python",
-      "JavaScript",
-      "CSS",
-    ],
+    technologies: ["React", "CSS", "Python", "Flask", "PostgreSQL"],
+    description:
+      "As part of my Software Engineering module in my second year, I worked on an industrial group project to design and develop a mentoring system. " +
+      "My role was primarily leading the front-end implementation, which was created using ReactJS. I also assisted with parts of the back-end, particularly ensuring that the data from the Flask API matched what the front-end was expecting to receive. " +
+      "The final system had various features, including: registering as a mentor or mentee; selecting from compatible mentors; arranging and signing up to larger-group workshop sessions; updating availability in a calendar; formulating plans of action; and viewing and updating profiles.",
   },
   {
     id: "personal-portfolio",
@@ -22,7 +19,9 @@ let allProjects = [
     type: "web-project",
     dates: "June 2021 - present",
     image: "1-homepage.png",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "JQuery"],
+    description:
+      "I created this website to showcase my projects and experience. The website has been coded completely from scratch, as I wanted to use the project as an opportunity to improve my web design and development skills.",
   },
   {
     id: "hello-demo",
@@ -32,6 +31,10 @@ let allProjects = [
     dates: "June 2021",
     image: "1-select-language.png",
     technologies: ["Swift", "Kotlin", "SwiftUI"],
+    description:
+      "This was a project that I created to teach myself app development. There are two versions: an iOS app, coded in Swift (using SwiftUI), and an Android app, written in Kotlin. " +
+      "The objectives that I started with were to have two identical versions of the same app, for it to take user input and display it on the next screen, and for it to work in both portrait and landscape modes. " +
+      "Ultimately, the apps are very simple: they ask for your name and language, then say hello to you in that language. However, it taught me a lot about the principles of mobile development!",
   },
   {
     id: "your-chores",
@@ -41,6 +44,11 @@ let allProjects = [
     dates: "February - March 2021",
     image: "5-assigned-chores.png",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "PostgreSQL"],
+    description:
+      "This was my first major web project. It was a coursework assignment for a university module, and I received a grade of 100%. " +
+      "The web application that I created allocates chores fairly between housemates. " +
+      "The allocation algorithm accounts for frequency of tasks, previously completed chores by each housemate, and the effort required for each task." +
+      "I also added several bonus features, including a rating system and leaderboard to encourage tasks to be completed to a good standard.",
   },
   {
     id: "social-scheduling",
@@ -49,17 +57,20 @@ let allProjects = [
     type: "app-project",
     dates: "September 2019 - March 2020",
     image: "9-join-availability.png",
+    technologies: ["Python", "MySQL", "Kivy"],
     description:
-      "test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description",
+      "I created a mobile app to help find the best times for a group of people to meet up. The app contained functionality such as creating events, selecting possible dates and times, inviting friends, and analysing the best choices based on availability. " +
+      "It even offered features such as allowing users to add a poll when creating an event (e.g. when organising a meal, you could collect votes on which restaurant to go to). " +
+      "The app was coded in Python, using Kivy as a framework for the UI, and MySQL for the database.",
   },
-  {
-    id: "tappyography",
-    title: "[In Progress] AI Tap Choreography System",
-    subtitle: "Web Application",
-    type: "web-project",
-    dates: "June 2022 - March 2023",
-    description: "",
-  },
+  //   {
+  //     id: "tappyography",
+  //     title: "[In Progress] AI Tap Choreography System",
+  //     subtitle: "Web Application",
+  //     type: "web-project",
+  //     dates: "June 2022 - March 2023",
+  //     description: "",
+  //   },
 ];
 
 var projectN = 0;
@@ -69,7 +80,6 @@ $(function () {
 });
 
 function createProjects() {
-  let mainProject = allProjects[projectN];
   let projectObjs = [];
 
   allProjects.forEach(function (project, index) {
@@ -84,13 +94,19 @@ function createProjects() {
       '<h3 class="proj-title">' +
       project.title +
       "</h3>" +
-      '<h4 class="proj-main-subtitle">' +
+      '<h4 class="proj-subtitle">' +
       project.subtitle +
       "</h4>";
     projectObjs.push(currentProject);
   });
 
-  $("#projects-container").append(projectObjs);
+  $("#projects-carousel-container").append(projectObjs);
+
+  $("#projects-background").on("click", function (e) {
+    if (e.target == this) {
+      closeProject();
+    }
+  });
 
   setProjectPositions(0);
 }
@@ -165,10 +181,30 @@ function setProjectPositions(projectNum) {
         });
       });
   }
+
+  setModalDetails(projectNum);
+}
+
+function setModalDetails(projectNum) {
+  const proj = allProjects[projectNum];
+  $("#projects-modal .proj-title").text(proj.title);
+  $("#projects-modal .proj-subtitle").text(proj.subtitle);
+  $("#projects-modal .proj-description").text(proj.description);
+  $("#projects-modal .proj-tags").empty();
+  for (const tag in proj.technologies) {
+    $("#projects-modal .proj-tags").append(
+      "<li>" + proj.technologies[tag] + "</li>"
+    );
+  }
 }
 
 function expandProject(projectNum) {
   console.log(allProjects[projectNum].id);
+  $("#projects-background").css({ opacity: 1, "z-index": 3 });
+}
+
+function closeProject() {
+  $("#projects-background").css({ opacity: 0, "z-index": -1 });
 }
 
 /** Utility functions **/

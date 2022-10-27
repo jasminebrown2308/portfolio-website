@@ -57,6 +57,77 @@
   }
 }
 
+/** Project modal (display full details about a project) **/
+#projects-modal {
+  position: fixed;
+  left: 10vw;
+  top: 10vh;
+  width: calc(80vw - 100px);
+  height: calc(80vh - 60px);
+  z-index: 4;
+  overflow-y: scroll;
+
+  background: white;
+  border: 10px solid var(--accent-colour);
+  border-radius: 20px;
+  padding: 20px 40px;
+}
+
+#projects-background {
+  background: #a0a0a0e0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal-close {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  z-index: 5;
+}
+
+.modal-close i {
+  color: var(--accent-colour);
+  transition: color 0.2s ease;
+  z-index: 5;
+}
+
+.modal-close i:hover {
+  color: #9ceac9;
+}
+
+.proj-title {
+  margin-bottom: 0.5em;
+}
+
+.proj-subtitle {
+  margin-top: 0;
+}
+
+ul.proj-tags {
+  list-style: none;
+  padding: 0;
+}
+
+.proj-tags li {
+  display: inline-block;
+  font-size: small;
+  padding: 5px 10px;
+  background: #1a1a1a;
+  color: var(--accent-colour);
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.proj-tags li:first-child {
+  margin-left: 0;
+}
+
 /** Next and prev chevron animations **/
 #scroll-next,
 #scroll-prev {
@@ -110,11 +181,11 @@
 }
 
 #scroll-next:hover #chevron-right-3 {
-  -webkit-transform: translateX(46px) scale(1);
-  -ms-transform: translateX(46px) scale(1);
-  -moz-transform: translateX(46px) scale(1);
-  -o-transform: translateX(46px) scale(1);
-  transform: translateX(46px) scale(1);
+  -webkit-transform: translateX(50px) scale(1);
+  -ms-transform: translateX(50px) scale(1);
+  -moz-transform: translateX(50px) scale(1);
+  -o-transform: translateX(50px) scale(1);
+  transform: translateX(50px) scale(1);
   opacity: 0.5;
 }
 
@@ -136,11 +207,11 @@
 }
 
 #scroll-prev:hover #chevron-left-1 {
-  -webkit-transform: translateX(-46px) scale(1);
-  -ms-transform: translateX(-46px) scale(1);
-  -moz-transform: translateX(-46px) scale(1);
-  -o-transform: translateX(-46px) scale(1);
-  transform: translateX(-46px) scale(1);
+  -webkit-transform: translateX(-50px) scale(1);
+  -ms-transform: translateX(-50px) scale(1);
+  -moz-transform: translateX(-50px) scale(1);
+  -o-transform: translateX(-50px) scale(1);
+  transform: translateX(-50px) scale(1);
   opacity: 0.5;
 }
 

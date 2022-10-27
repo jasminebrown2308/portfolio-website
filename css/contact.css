@@ -74,8 +74,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #1a1a1a;
-  color: white;
+  background-color: #9ceac9;
 }
 
 textarea {

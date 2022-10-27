@@ -97,9 +97,68 @@ i[id^="chevron"] {
 }
 
 /** ABOUT SECTION **/
-.bio-container {
-  margin-top: 20px;
-  background: var(--accent-colour);
+#about {
+  height: unset;
+}
+
+.about-container {
+  margin-top: 7vh;
+  border: 10px solid var(--accent-colour);
   border-radius: 40px 0 40px 0;
-  height: 70vh;
+  display: flex;
+}
+
+.bio {
+  float: left;
+  padding: 30px;
+  width: 75%;
+}
+
+.bio p {
+  font-size: 20px;
+}
+
+.bio p::selection {
+  background-color: #e5e5e5;
+}
+
+.bio a {
+  color: #1a1a1a;
+  border-bottom: 2px solid var(--accent-colour);
+}
+
+.bio a:hover,
+.bio a:active {
+  border-bottom-color: #9ceac9;
+}
+
+.skills {
+  float: right;
+  width: 25%;
+  background: #e5e5e5;
+  border-radius: 0 0 30px 0;
+  padding: 30px;
+}
+
+.skills ul {
+  padding-inline-start: 20px;
+}
+
+.skills li {
+  list-style-type: circle;
+}
+
+@media screen and (max-width: 660px) {
+  .bio p {
+    font-size: 16px;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .bio,
+  .skills {
+    width: auto;
+  }
 }
