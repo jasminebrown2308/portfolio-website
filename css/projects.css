@@ -64,7 +64,7 @@
   top: 10vh;
   width: calc(80vw - 100px);
   height: calc(80vh - 60px);
-  z-index: 4;
+  z-index: 6;
   overflow-y: scroll;
 
   background: white;
@@ -88,13 +88,13 @@
   position: absolute;
   right: 25px;
   top: 25px;
-  z-index: 5;
+  z-index: 7;
 }
 
 .modal-close i {
   color: var(--accent-colour);
   transition: color 0.2s ease;
-  z-index: 5;
+  z-index: 7;
 }
 
 .modal-close i:hover {

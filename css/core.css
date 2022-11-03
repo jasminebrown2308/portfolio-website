@@ -106,7 +106,7 @@ button {
   width: 96vw;
   padding: 2vh 2vw 0vh 2vw;
   background-color: #1a1a1a;
-  z-index: 3;
+  z-index: 4;
 }
 
 .menu-text {

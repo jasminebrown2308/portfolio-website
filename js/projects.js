@@ -200,7 +200,7 @@ function setModalDetails(projectNum) {
 
 function expandProject(projectNum) {
   console.log(allProjects[projectNum].id);
-  $("#projects-background").css({ opacity: 1, "z-index": 3 });
+  $("#projects-background").css({ opacity: 1, "z-index": 5 });
 }
 
 function closeProject() {
