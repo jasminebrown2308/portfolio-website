@@ -161,4 +161,8 @@ i[id^="chevron"] {
   .skills {
     width: auto;
   }
+
+  #subtitle {
+    font-size: 32px;
+  }
 }

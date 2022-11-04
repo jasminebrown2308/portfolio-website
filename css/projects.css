@@ -50,13 +50,6 @@
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 660px) {
-  .prev2,
-  .next2 {
-    opacity: 0 !important;
-  }
-}
-
 /** Project modal (display full details about a project) **/
 #projects-modal {
   position: fixed;
@@ -230,4 +223,19 @@ ul.proj-tags {
   -moz-transform: translateX(-8px);
   -o-transform: translateX(-8px);
   transform: translateX(-8px);
+}
+
+@media screen and (max-width: 660px) {
+  .prev2,
+  .next2 {
+    opacity: 0 !important;
+  }
+
+  #scroll-next {
+    right: 1vw;
+  }
+
+  #scroll-prev {
+    left: 1vw;
+  }
 }

@@ -47,7 +47,7 @@ const allProjects = [
     description:
       "This was my first major web project. It was a coursework assignment for a university module, and I received a grade of 100%. " +
       "The web application that I created allocates chores fairly between housemates. " +
-      "The allocation algorithm accounts for frequency of tasks, previously completed chores by each housemate, and the effort required for each task." +
+      "The allocation algorithm accounts for frequency of tasks, previously completed chores by each housemate, and the effort required for each task. " +
       "I also added several bonus features, including a rating system and leaderboard to encourage tasks to be completed to a good standard.",
   },
   {
